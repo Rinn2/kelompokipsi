@@ -165,6 +165,8 @@ Penjelasan :
 - $y_i$ = nilai aktual ke-*i*  
 - $n$ = jumlah data
 
+![image](https://github.com/user-attachments/assets/088bf5b6-9de8-408d-a625-207ee74b86b0)
+
 
 Model collaborative filtering yang dikembangkan berhasil mencapai performa yang cukup baik dengan nilai Root Mean Squared Error (RMSE) sebesar 0.2721 pada data pelatihan dan 0.2683 pada data pengujian. Perbedaan nilai RMSE yang kecil antara data pelatihan dan pengujian menunjukkan bahwa model memiliki kemampuan generalisasi yang baik dan tidak mengalami overfitting secara signifikan.
 
