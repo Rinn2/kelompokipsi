@@ -86,7 +86,9 @@ Mengubah kategori buku menjadi representasi vektor menggunakan TF-IDF, lalu meng
 Baris dengan rating = 0 dihapus karena dianggap tidak memberikan evaluasi terhadap buku
 #### 2. Normaliasi Rating
 Melakukan normalisasi nilai rating ke rentang 0–1 agar sesuai dengan fungsi aktivasi sigmoid dalam model Collaborative Filtering
-#### 3.Splitting Dataset
+#### 3.Melakukan Encoding
+Encoding dilakukan dengan mengubah nilai kategorikal user_id dan isbn menjadi angka agar dapat digunakan oleh model. Setiap user_id dan isbn dipetakan ke angka unik menggunakan dictionary (encode_user_id dan encode_book_id), serta disediakan mapping sebaliknya (decode_user_id dan decode_book_id) untuk interpretasi hasil prediksi. Hasil encoding ini disimpan ke dalam kolom baru user dan book pada DataFrame.
+#### 4.Splitting Dataset
 Data dibagi menjadi 80% data latih dan 20% data validasi untuk mengevaluasi kinerja model.
 
 ## Modeling
