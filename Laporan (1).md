@@ -161,9 +161,10 @@ $$
 $$
 
 Penjelasan :
-- \( \hat{y}_i \) = nilai prediksi ke-i  
-- \( y_i \) = nilai aktual ke-i  
-- \( n \) = jumlah data  
+- $\hat{y}_i$ = nilai prediksi ke-*i*  
+- $y_i$ = nilai aktual ke-*i*  
+- $n$ = jumlah data
+
 
 Model collaborative filtering yang dikembangkan berhasil mencapai performa yang cukup baik dengan nilai Root Mean Squared Error (RMSE) sebesar 0.2721 pada data pelatihan dan 0.2683 pada data pengujian. Perbedaan nilai RMSE yang kecil antara data pelatihan dan pengujian menunjukkan bahwa model memiliki kemampuan generalisasi yang baik dan tidak mengalami overfitting secara signifikan.
 
