@@ -143,6 +143,7 @@ Hasil yang diprediksi oleh model
 Precision adalah salah satu metrik evaluasi yang sering digunakan untuk menilai kualitas sistem rekomendasi, termasuk Content-Based Filtering. Precision mengukur seberapa tepat rekomendasi yang diberikan oleh sistem.
 
 Precision = (Jumlah rekomendasi buku yang relevan) / (Jumlah item yang direkomendasikan)
+
 dalam hasil yang diberikan menggunakan sebagai berikut 
 	Precision = $\\frac{10}{10} = 1$
 
