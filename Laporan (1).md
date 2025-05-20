@@ -110,6 +110,7 @@ Dalam sistem ini, representasi konten item (buku) diekstrak menggunakan TF-IDF V
 #### Hasil Top-10 Recommendation
 
 ![image](https://github.com/user-attachments/assets/f4829fcd-4e6a-444a-bd16-2d58b86831ed)
+
 Hasil yang diprediksi oleh model
 ### Colaborative Filtering
 Collaborative Filtering adalah teknik dalam sistem rekomendasi yang memberikan rekomendasi berdasarkan preferensi atau perilaku pengguna lain yang memiliki kesamaan dengan pengguna target. Sistem ini tidak bergantung pada konten item, melainkan pada pola interaksi pengguna dengan item 
