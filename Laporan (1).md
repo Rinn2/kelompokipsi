@@ -30,9 +30,9 @@ Pengguna sering kali kesulitan menemukan buku yang sesuai dengan minat dan kebut
 - Menganalisis kesamaan antara buku berdasarkan deskripsi kontennya (TF-IDF, cosine similarity, dll.)
 - Memberikan rekomendasi buku yang mirip dengan yang sudah disukai oleh pengguna
 
-#### Content-Based Filtering
+#### Collaborative Filtering
 - Menggunakan data interaksi pengguna (user_id, isbn, dan rating)
-- Membangun model dengan pendekatan matrix factorization (misalnya: Embedding layer pada TensorFlow atau algoritma seperti SVD)
+- Membangun model dengan pendekatan matrix factorization 
 - Merekomendasikan buku berdasarkan preferensi pengguna lain yang mirip
   
 ## Data Understanding
@@ -82,12 +82,13 @@ Langkah ini mengonversi kolom isbn, book_title, dan category menjadi list, lalu 
 Mengubah kategori buku menjadi representasi vektor menggunakan TF-IDF, lalu menghitung cosine similarity antar buku untuk Content-Based Filtering
 
 ### Data Preparation Collaborative Filtering
-#### 1. Menghapus Rating 0
+#### 1. Drop buku dengan rating 0
 Baris dengan rating = 0 dihapus karena dianggap tidak memberikan evaluasi terhadap buku
-#### 2. Normaliasi Rating
+#### 2.Melakukan Encoding
+Encoding dilakukan dengan mengubah nilai kategorikal user_id dan isbn menjadi angka agar dapat digunakan oleh model. Setiap user_id dan isbn dipetakan ke angka unik menggunakan dictionary (encode_user_id dan encode_book_id), serta disediakan mapping sebaliknya (decode_user_id dan decode_book_id) untuk interpretasi hasil prediksi. Hasil encoding ini disimpan ke dalam kolom baru user dan book pada 
+#### 3. Normaliasi Rating
 Melakukan normalisasi nilai rating ke rentang 0–1 agar sesuai dengan fungsi aktivasi sigmoid dalam model Collaborative Filtering
-#### 3.Melakukan Encoding
-Encoding dilakukan dengan mengubah nilai kategorikal user_id dan isbn menjadi angka agar dapat digunakan oleh model. Setiap user_id dan isbn dipetakan ke angka unik menggunakan dictionary (encode_user_id dan encode_book_id), serta disediakan mapping sebaliknya (decode_user_id dan decode_book_id) untuk interpretasi hasil prediksi. Hasil encoding ini disimpan ke dalam kolom baru user dan book pada DataFrame.
+DataFrame.
 #### 4.Splitting Dataset
 Data dibagi menjadi 80% data latih dan 20% data validasi untuk mengevaluasi kinerja model.
 
